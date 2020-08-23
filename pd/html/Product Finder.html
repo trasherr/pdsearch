@@ -66,11 +66,16 @@
         <a href="#contact">Contact</a>
         <a href="#feedback">Feedback</a>
       </div> 
-      
+	  
       <div align="center">
         <br><br><br><br><br>
         <input class="Searchbar" type="text" placeholder="Enter the product information here...">
-        <button class="Search_button">Search</button>
+        <button class="Search_button" onclick="location.herf='{% url 'script' %}'" >Search</button>
+		
+	  {% if data %}
+	  {{data}}
+	  {% endif %}
+	  
         <br><br><br><br>
       </div>
       <p class="about">
