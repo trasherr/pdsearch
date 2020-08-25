@@ -70,12 +70,22 @@
       <div align="center">
         <br><br><br><br><br>
         <input class="Searchbar" type="text" placeholder="Enter the product information here...">
-        <button class="Search_button" onclick="location.herf='{% url 'script' %}'" >Search</button>
-		
-	  {% if data %}
-	  {{data}}
-	  {% endif %}
+        <button class="Search_button" onclick="location.href='{% url 'script' %}'">Search</button><hr>
+		<button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr>
+		{% if data %}
 	  
+		{{data | safe}}
+		{% endif %}
+	  
+		<form action="/external/" method=“post“>
+		{% csrf_token %}
+		Input Text:
+		<input type="text" name="param" required><br><br>
+		{{data_external}}<br><br>
+		{{data1}}
+		<br><br>
+		<input type="submit" value="Execute External Python Script">
+		</form>
         <br><br><br><br>
       </div>
       <p class="about">
