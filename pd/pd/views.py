@@ -16,6 +16,6 @@ def output(request):
 
 def external(request):
     inp=request.POST.get('param')
-    out=run([sys.executable,'//mnt//c//User//howto//external.py',inp],shell=False,stdout=PIPE)
+    out=run([sys.executable,'//mnt//c//Users//howto//pd//external.py',inp],shell=False,stdout=PIPE)
     print(out)
     return render(request,'Product Finder.html',{'data1':out.stdout})
