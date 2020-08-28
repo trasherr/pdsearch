@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 
-search=str(sys.argv)
+search=str(sys.argv[1])
 
 amazon_url='https://www.amazon.in/s?k='+search+'&ref=nb_sb_noss_2'
 flipkart_url='https://www.flipkart.com/search?q='+search+'&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off'
@@ -18,10 +18,9 @@ amazon_code=BeautifulSoup(amazon_page.content,'html.parser')
 flipkart_code=BeautifulSoup(flipkart_page.content,'html.parser')
 reliance_code=BeautifulSoup(reliance_page.content,'html.parser')
 
-
+print(flipkart_url)
 #print(amazon_url)
 #print(amazon_code)
 #print(flipkart_url)
 #print(flipkart_code)
-print(search)
 #print(reliance_code)

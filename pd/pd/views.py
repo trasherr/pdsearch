@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import requests
 import sys
-from subprocess import run,PIPE
+import subprocess
 
 
 def button(request):
@@ -16,6 +16,9 @@ def output(request):
 
 def external(request):
     inp=request.POST.get('param')
-    out=run([sys.executable,"//mnt//e//unityprojects//github//pdsearch//pd//external.py",inp],shell=False,stdout=PIPE)
+    out=subprocess.run([sys.executable,"E:\\unityprojects\\github\\pdsearch\\pd\\external.py",inp],shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     print(out)
-    return render(request,'Product Finder.html',{'data1':out.stdout})
+    out=out.stdout
+    return render(request,'Product Finder.html',{'data':out.decode('utf-8')})
+    #return render(request,'Product Finder.html',{'data1':out.stdout})
+    #return render(request,'Product Finder.html',{'data1':out.stdout.decode('utf-8')})
