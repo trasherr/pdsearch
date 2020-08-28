@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<style>
+    
+    #title{
+		text-align: center;
+		font-size: 50px;
+		padding: 10px;
+    color: rgb(150, 80, 34);
+	}
+
+    #description{
+		text-align: center;
+		font-size: 20px;
+		padding: 0px;
+    color: rgba(252, 0, 0, 0.5);
+    }
+
+    #survey-form{
+      text-align: center;
+      box-shadow: 50px;
+      background-color: rgb(202, 201, 201);
+    }
+	
+	header{
+		background-color: rgba(54, 69, 133, 0.534);
+	}
+
+  body{
+    
+  }
+
+  .main{
+    background-color: silver:
+  }
+</style>
+
+<HTML>
+    <HEAD>
+        <TITLE>Feedback</TITLE>
+    </HEAD>
+    <BODY>
+	    <header>
+        <h1 id="title">Product Finder</h1>
+        <p id="description"><b>The only tool you ever need to get BEST results</b></p>
+		    <br>
+	    </header>  
+      <main class="main">
+        <form id="survey-form">
+            <!-- id="name"  -->
+            <label id="name">Name:</label>
+            <input type="text" placeholder="Enter your name:" required /> <br>
+            <!-- id="email it should give validation error if enter incorrect -->
+            <label id="email">Email ID:</label>
+            <input type="email" placeholder="Enter your Email ID:" required /> <br>
+            <!-- id="number for phone number  : should give error if enter incorrect : enter number must be in range use min() max()  -->
+            <label id="number">Phone Number:</label>
+            <input type="number" placeholder="Enter your phone number" required /> <br>
+            <!-- the name email, and number input fields inside the form -> id="name-label", id="email-label", and id="number-label" ->
+            have placeholders inside -->
+            <label>Feedback:</label>
+            <input type="textbox" placeholder="Your text goes here......" />
+        </form>
+      </main>
+    </BODY>
+</HTML>

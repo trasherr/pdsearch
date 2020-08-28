@@ -61,17 +61,14 @@
         <h1>Product Finder</h1>
       </div>
       <div class="Taskbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#feedback">Feedback</a>
+        <a href="C:\Users\Sanjeev\Documents\GitHub\pdsearch\pd\html\Product Finder.html" target="_blank">Home</a>
+        <a href="C:\Users\Sanjeev\Documents\GitHub\pdsearch\pd\html\About.html" target="_blank">About</a>
+        <a href="C:\Users\Sanjeev\Documents\GitHub\pdsearch\pd\html\Contacts.html" target="_blank">Contact</a>
+        <a href="C:\Users\Sanjeev\Documents\GitHub\pdsearch\pd\html\Feedback.html" target="_blank">Feedback</a>
       </div> 
 	  
       <div align="center">
         <br><br><br><br><br>
-        <input class="Searchbar" type="text" placeholder="Enter the product information here...">
-        <button class="Search_button" onclick="location.href='{% url 'script' %}'">Search</button><hr>
-		<button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr>
 		{% if data %}
 	  
 		{{data | safe}}
@@ -80,11 +77,11 @@
 		<form action="/external/" method="post">
 		{% csrf_token %}
 		Input Text:
-		<input type="text" name="param" required><br><br>
+		<input class="Searchbar" type="text" name="param" required><br><br>
 		{{data_external}}<br>
 		{{data1}}
 		<br><br>
-		<input type="submit" value="Search">
+		<input class="Search_button" type="submit" value="Search">
 		</form>
 		
 		
